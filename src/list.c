@@ -38,9 +38,11 @@ void printout(node *l) {
   /*Excercise 3d) Implement your changes.. 
     pre: head points to the first, empty element. The last element's next is NULL
     post: the values of the list are printed out*/
-    node *p = l->next;
-    while (p!=NULL){
-      printf("%d, ",p->data);
+    node *p = l->next; // creates a pointer p that points to the first not empty element 
+   
+    while (p!=NULL){ // will print all data including the last element 
+      printf("%d, ",p->data); // prints data in element 
+      p = p->next; // updates pointer p to point to next element 
     }
     printf("\n");
 }
