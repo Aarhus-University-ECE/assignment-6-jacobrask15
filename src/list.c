@@ -51,6 +51,16 @@ int largest(node *l){
     /*Excercise 3e) Add your code below.
       pre: head points to the first, empty element. The last element's next is NULL. size(l>0)
       post: returns the largest value of the list*/
-    return -1; 
+    node *p = l->next; // creates a pointer p that points to the first not empty element
+    int result = p->data; //creates variable to store result and stores first elements data there
+    
+    while(p->next!=NULL) { // runs loop until we reach last element
+    if (p->data > result) { 
+        result = p->data; // updates result to current largest data
+    }
+    p = p->next; // updates p to point to next element
+    }
+
+    return result; 
 }
 
