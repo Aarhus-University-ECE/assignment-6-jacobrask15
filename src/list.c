@@ -23,9 +23,15 @@ void add(node *head, int x){
 
 int size(node *l){
     // Excercise 3b)
-    // Add your code here... 
+  node *p = l; // a pointer of type node to point at the next "next" element
+  int i = 0;
 
-    return -1;
+  while (p->next != NULL) { //stops counting if next is NULL
+    p = p->next; //updates p to be a pointer to next element 
+    i++; //counts size, includes first element but not last, which gives the correct size
+  }
+
+    return i;
 }
 
 void printout(node *l) {
